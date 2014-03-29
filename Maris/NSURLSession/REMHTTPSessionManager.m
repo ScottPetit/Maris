@@ -19,7 +19,12 @@
 
 - (instancetype)initWithBaseURL:(NSURL *)url
 {
-    self = [super initWithBaseURL:url];
+    return [self initWithBaseURL:url sessionConfiguration:nil];
+}
+
+- (instancetype)initWithBaseURL:(NSURL *)url sessionConfiguration:(NSURLSessionConfiguration *)configuration
+{
+    self = [super initWithBaseURL:url sessionConfiguration:configuration];
     if (self)
     {
         self.responseSerializer = [REMCompoundResponseSerializer serializer];
