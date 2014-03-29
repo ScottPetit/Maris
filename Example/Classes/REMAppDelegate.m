@@ -7,6 +7,7 @@
 //
 
 #import "REMAppDelegate.h"
+#import "DribbbleHTTPSessionManager.h"
 
 @implementation REMAppDelegate
 
@@ -16,6 +17,13 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
+    [[DribbbleHTTPSessionManager sharedManager] shotsWithSuccess:^(NSURLSessionDataTask *dataTask, id responseObject) {
+        NSLog(@"Response - %@", responseObject);
+    } failure:^(NSURLSessionDataTask *dataTask, NSError *error) {
+        NSLog(@"Error - %@", error);
+    }];
+    
     return YES;
 }
 
