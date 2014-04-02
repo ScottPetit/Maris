@@ -1,0 +1,41 @@
+{
+  "sport": {
+    "name": "baseball",
+    "league": {
+      "name": "Major League Baseball",
+      "abbreviation": "mlb",
+      "shortName": "MLB",
+      "athletes": [
+        {
+          "id": 3114,
+          "firstName": "Roger",
+          "lastName": "Maris",
+          "fullName": "Roger Eugene Maris",
+          "displayName": "Roger Maris",
+          "shortName": "R. Maris"
+        },
+        {
+          "id": 3115,
+          "firstName": "Mickey",
+          "lastName": "Mantle",
+          "fullName": "Mickey Charles Mantle",
+          "displayName": "Mickey Mantle",
+          "shortName": "M. Mantle"
+        }
+      ]
+    }
+  },
+  "athlete": {
+    "id": 3114,
+    "firstName": "Roger",
+    "lastName": "Maris",
+    "fullName": "Roger Eugene Maris",
+    "displayName": "Roger Maris",
+    "shortName": "R. Maris"
+  },
+  "resultsOffset": 0,
+  "resultsLimit": 50,
+  "resultsCount": 1,
+  "timestamp": "2012-11-21T16:25:36Z",
+  "status": "success"
+}

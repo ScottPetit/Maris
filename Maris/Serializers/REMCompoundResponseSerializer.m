@@ -12,8 +12,6 @@
 
 @property (nonatomic, strong) NSMutableDictionary *mutableDictionary;
 
-- (NSArray *)serializers;
-
 @end
 
 @implementation REMCompoundResponseSerializer
@@ -26,17 +24,29 @@
     
     id<AFURLResponseSerialization> responseSerializer = [self.mutableDictionary objectForKey:[URL absoluteString]];
     
+    if (!responseSerializer)
+    {
+        NSLog(@"No response serializer registered for URL - %@", URL);
+    }
+    
     return [responseSerializer responseObjectForResponse:response data:data error:error];
 }
 
 #pragma mark - Public
 
-- (void)registerResponseSerializer:(id<AFURLResponseSerialization>)responseSerializer toDataTask:(NSURLSessionDataTask *)dataTask
+- (void)registerResponseSerializer:(id<AFURLResponseSerialization>)responseSerializer withDataTask:(NSURLSessionDataTask *)dataTask
 {
-    NSURLRequest *request = [dataTask originalRequest];
-    NSURL *URL = [request URL];
-    
-    [self.mutableDictionary setObject:responseSerializer forKey:[[URL absoluteString] copy]];
+    if (dataTask && responseSerializer)
+    {
+        NSURLRequest *request = [dataTask originalRequest];
+        NSURL *URL = [request URL];
+        
+        [self.mutableDictionary setObject:responseSerializer forKey:[[URL absoluteString] copy]];
+    }
+    else
+    {
+        NSLog(@"Attempting to register either a nil response serializer - %@ or a nil datatask - %@.  Currently you are protected from asserting but that is not gauranteed to always be the case.", responseSerializer, dataTask);
+    }
 }
 
 #pragma mark - Accessors
@@ -51,11 +61,6 @@
 }
 
 - (NSArray *)responseSerializers
-{
-    return [self.mutableDictionary allValues];
-}
-
-- (NSArray *)serializers
 {
     return [self.mutableDictionary allValues];
 }

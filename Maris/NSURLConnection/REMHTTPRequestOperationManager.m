@@ -22,6 +22,7 @@
                                                                    URLString:[[NSURL URLWithString:URLString relativeToURL:self.baseURL] absoluteString]
                                                                   parameters:parameters
                                                                        error:NULL];
+    
     AFHTTPRequestOperation *operation = [self HTTPRequestOperationWithRequest:request
                                                                   modelClass:modelClass
                                                                 keyPath:keyPath
@@ -43,6 +44,7 @@
                                                                    URLString:[[NSURL URLWithString:URLString relativeToURL:self.baseURL] absoluteString]
                                                                   parameters:parameters
                                                                        error:NULL];
+    
     AFHTTPRequestOperation *operation = [self HTTPRequestOperationWithRequest:request
                                                                    modelClass:modelClass
                                                                       keyPath:keyPath
@@ -66,6 +68,7 @@
                                                                                parameters:parameters
                                                                 constructingBodyWithBlock:block
                                                                                     error:NULL];
+    
     AFHTTPRequestOperation *operation = [self HTTPRequestOperationWithRequest:request
                                                                    modelClass:modelClass
                                                                       keyPath:keyPath
@@ -87,6 +90,7 @@
                                                                    URLString:[[NSURL URLWithString:URLString relativeToURL:self.baseURL] absoluteString]
                                                                   parameters:parameters
                                                                        error:NULL];
+    
     AFHTTPRequestOperation *operation = [self HTTPRequestOperationWithRequest:request
                                                                    modelClass:modelClass
                                                                       keyPath:keyPath
@@ -108,6 +112,7 @@
                                                                    URLString:[[NSURL URLWithString:URLString relativeToURL:self.baseURL] absoluteString]
                                                                   parameters:parameters
                                                                        error:NULL];
+    
     AFHTTPRequestOperation *operation = [self HTTPRequestOperationWithRequest:request
                                                                    modelClass:modelClass
                                                                       keyPath:keyPath
@@ -129,6 +134,7 @@
                                                                    URLString:[[NSURL URLWithString:URLString relativeToURL:self.baseURL] absoluteString]
                                                                   parameters:parameters
                                                                        error:NULL];
+    
     AFHTTPRequestOperation *operation = [self HTTPRequestOperationWithRequest:request
                                                                    modelClass:modelClass
                                                                       keyPath:keyPath

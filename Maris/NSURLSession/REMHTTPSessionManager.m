@@ -136,7 +136,7 @@
 - (void)registerSerializerWithModelClass:(Class)modelClass keyPath:(NSString *)keyPath toDataTask:(NSURLSessionDataTask *)dataTask
 {
     REMResponseSerializer *serializer = [REMResponseSerializer serializerWithModelClass:modelClass keyPath:keyPath];
-    [self.responseSerializer registerResponseSerializer:serializer toDataTask:dataTask];
+    [self.responseSerializer registerResponseSerializer:serializer withDataTask:dataTask];
 }
 
 @end

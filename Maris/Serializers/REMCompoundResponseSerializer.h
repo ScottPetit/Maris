@@ -10,6 +10,6 @@
 
 @interface REMCompoundResponseSerializer : AFCompoundResponseSerializer
 
-- (void)registerResponseSerializer:(id<AFURLResponseSerialization>)responseSerializer toDataTask:(NSURLSessionDataTask *)dataTask;
+- (void)registerResponseSerializer:(id<AFURLResponseSerialization>)responseSerializer withDataTask:(NSURLSessionDataTask *)dataTask;
 
 @end
