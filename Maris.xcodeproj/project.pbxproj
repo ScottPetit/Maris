@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		6749315BD30144D28A791BAC /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B24EE8758C91449F8A697F76 /* libPods.a */; };
 		7FD359CCADCA4C95917FCCB7 /* libPods-MarisTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EDD644E9B54C41E297826667 /* libPods-MarisTests.a */; };
+		D29F18EC18E964FD006A9C2D /* REMCompoundResponseSerializerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D29F18EB18E964FD006A9C2D /* REMCompoundResponseSerializerTests.m */; };
 		D2EBF7A518E6CB84003BF18F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2EBF7A418E6CB84003BF18F /* Foundation.framework */; };
 		D2EBF7A718E6CB84003BF18F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2EBF7A618E6CB84003BF18F /* CoreGraphics.framework */; };
 		D2EBF7A918E6CB84003BF18F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2EBF7A818E6CB84003BF18F /* UIKit.framework */; };
@@ -22,11 +23,14 @@
 		D2EBF7EA18E6CBCC003BF18F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D2EBF7E218E6CBCC003BF18F /* InfoPlist.strings */; };
 		D2EBF7F218E6CCE0003BF18F /* REMCompoundResponseSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = D2EBF7EF18E6CCE0003BF18F /* REMCompoundResponseSerializer.m */; };
 		D2EBF7F318E6CCE0003BF18F /* REMResponseSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = D2EBF7F118E6CCE0003BF18F /* REMResponseSerializer.m */; };
-		D2EBF7F718E6CE0D003BF18F /* NSDictionary+Maris.m in Sources */ = {isa = PBXBuildFile; fileRef = D2EBF7F618E6CE0D003BF18F /* NSDictionary+Maris.m */; };
 		D2EBF7FF18E70DAE003BF18F /* REMHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D2EBF7FE18E70DAE003BF18F /* REMHTTPSessionManager.m */; };
 		D2EBF80218E70DFB003BF18F /* REMHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D2EBF80118E70DFB003BF18F /* REMHTTPRequestOperationManager.m */; };
 		D2EBF80E18E71556003BF18F /* DRBLShot.m in Sources */ = {isa = PBXBuildFile; fileRef = D2EBF80B18E71556003BF18F /* DRBLShot.m */; };
 		D2EBF80F18E71556003BF18F /* DribbbleHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D2EBF80D18E71556003BF18F /* DribbbleHTTPSessionManager.m */; };
+		D2EBF81218E73A99003BF18F /* REMResponseSerializerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D2EBF81118E73A99003BF18F /* REMResponseSerializerTests.m */; };
+		D2EBF81918E7F006003BF18F /* REMTestUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = D2EBF81718E7EFEB003BF18F /* REMTestUtility.m */; };
+		D2EBF81A18E7F00B003BF18F /* baseball.json in Resources */ = {isa = PBXBuildFile; fileRef = D2EBF81418E7EFCE003BF18F /* baseball.json */; };
+		D2EBF81D18E7F0C0003BF18F /* ESPNAthlete.m in Sources */ = {isa = PBXBuildFile; fileRef = D2EBF81C18E7F0C0003BF18F /* ESPNAthlete.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +47,7 @@
 		3BB1EE49CC9347D19C33BA55 /* Pods-MarisTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarisTests.xcconfig"; path = "Pods/Pods-MarisTests.xcconfig"; sourceTree = "<group>"; };
 		9DD2104CC5B7489D8767990A /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		B24EE8758C91449F8A697F76 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D29F18EB18E964FD006A9C2D /* REMCompoundResponseSerializerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REMCompoundResponseSerializerTests.m; sourceTree = "<group>"; };
 		D2EBF7A118E6CB84003BF18F /* Maris.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Maris.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2EBF7A418E6CB84003BF18F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D2EBF7A618E6CB84003BF18F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -62,8 +67,6 @@
 		D2EBF7EF18E6CCE0003BF18F /* REMCompoundResponseSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REMCompoundResponseSerializer.m; sourceTree = "<group>"; };
 		D2EBF7F018E6CCE0003BF18F /* REMResponseSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REMResponseSerializer.h; sourceTree = "<group>"; };
 		D2EBF7F118E6CCE0003BF18F /* REMResponseSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REMResponseSerializer.m; sourceTree = "<group>"; };
-		D2EBF7F518E6CE0D003BF18F /* NSDictionary+Maris.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Maris.h"; sourceTree = "<group>"; };
-		D2EBF7F618E6CE0D003BF18F /* NSDictionary+Maris.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Maris.m"; sourceTree = "<group>"; };
 		D2EBF7FD18E70DAE003BF18F /* REMHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REMHTTPSessionManager.h; sourceTree = "<group>"; };
 		D2EBF7FE18E70DAE003BF18F /* REMHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REMHTTPSessionManager.m; sourceTree = "<group>"; };
 		D2EBF80018E70DFB003BF18F /* REMHTTPRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REMHTTPRequestOperationManager.h; sourceTree = "<group>"; };
@@ -72,6 +75,12 @@
 		D2EBF80B18E71556003BF18F /* DRBLShot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRBLShot.m; sourceTree = "<group>"; };
 		D2EBF80C18E71556003BF18F /* DribbbleHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DribbbleHTTPSessionManager.h; sourceTree = "<group>"; };
 		D2EBF80D18E71556003BF18F /* DribbbleHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DribbbleHTTPSessionManager.m; sourceTree = "<group>"; };
+		D2EBF81118E73A99003BF18F /* REMResponseSerializerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REMResponseSerializerTests.m; sourceTree = "<group>"; };
+		D2EBF81418E7EFCE003BF18F /* baseball.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = baseball.json; sourceTree = "<group>"; };
+		D2EBF81618E7EFEB003BF18F /* REMTestUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REMTestUtility.h; sourceTree = "<group>"; };
+		D2EBF81718E7EFEB003BF18F /* REMTestUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REMTestUtility.m; sourceTree = "<group>"; };
+		D2EBF81B18E7F0C0003BF18F /* ESPNAthlete.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESPNAthlete.h; sourceTree = "<group>"; };
+		D2EBF81C18E7F0C0003BF18F /* ESPNAthlete.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESPNAthlete.m; sourceTree = "<group>"; };
 		EDD644E9B54C41E297826667 /* libPods-MarisTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MarisTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -181,7 +190,6 @@
 				D2EBF7FC18E70DAE003BF18F /* NSURLSession */,
 				D2EBF7FB18E70DAE003BF18F /* NSURLConnection */,
 				D2EBF7ED18E6CCE0003BF18F /* Serializers */,
-				D2EBF7F418E6CE0D003BF18F /* Categories */,
 			);
 			path = Maris;
 			sourceTree = "<group>";
@@ -198,6 +206,7 @@
 		D2EBF7E118E6CBCC003BF18F /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
+				D2EBF81318E7EFCE003BF18F /* JSON */,
 				D2EBF7E218E6CBCC003BF18F /* InfoPlist.strings */,
 				D2EBF7E418E6CBCC003BF18F /* MarisTests-Info.plist */,
 			);
@@ -207,6 +216,11 @@
 		D2EBF7EC18E6CC08003BF18F /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				D2EBF81618E7EFEB003BF18F /* REMTestUtility.h */,
+				D2EBF81718E7EFEB003BF18F /* REMTestUtility.m */,
+				D2EBF81B18E7F0C0003BF18F /* ESPNAthlete.h */,
+				D2EBF81C18E7F0C0003BF18F /* ESPNAthlete.m */,
+				D2EBF81018E73A36003BF18F /* Serializers */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -220,15 +234,6 @@
 				D2EBF7F118E6CCE0003BF18F /* REMResponseSerializer.m */,
 			);
 			path = Serializers;
-			sourceTree = "<group>";
-		};
-		D2EBF7F418E6CE0D003BF18F /* Categories */ = {
-			isa = PBXGroup;
-			children = (
-				D2EBF7F518E6CE0D003BF18F /* NSDictionary+Maris.h */,
-				D2EBF7F618E6CE0D003BF18F /* NSDictionary+Maris.m */,
-			);
-			path = Categories;
 			sourceTree = "<group>";
 		};
 		D2EBF7FB18E70DAE003BF18F /* NSURLConnection */ = {
@@ -258,6 +263,23 @@
 				D2EBF80D18E71556003BF18F /* DribbbleHTTPSessionManager.m */,
 			);
 			path = Dribbble;
+			sourceTree = "<group>";
+		};
+		D2EBF81018E73A36003BF18F /* Serializers */ = {
+			isa = PBXGroup;
+			children = (
+				D29F18EB18E964FD006A9C2D /* REMCompoundResponseSerializerTests.m */,
+				D2EBF81118E73A99003BF18F /* REMResponseSerializerTests.m */,
+			);
+			path = Serializers;
+			sourceTree = "<group>";
+		};
+		D2EBF81318E7EFCE003BF18F /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				D2EBF81418E7EFCE003BF18F /* baseball.json */,
+			);
+			path = JSON;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -350,6 +372,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2EBF81A18E7F00B003BF18F /* baseball.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,8 +447,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D2EBF80218E70DFB003BF18F /* REMHTTPRequestOperationManager.m in Sources */,
-				D2EBF7F718E6CE0D003BF18F /* NSDictionary+Maris.m in Sources */,
 				D2EBF7FF18E70DAE003BF18F /* REMHTTPSessionManager.m in Sources */,
+				D2EBF81D18E7F0C0003BF18F /* ESPNAthlete.m in Sources */,
 				D2EBF7E718E6CBCC003BF18F /* main.m in Sources */,
 				D2EBF7E518E6CBCC003BF18F /* REMAppDelegate.m in Sources */,
 				D2EBF7F218E6CCE0003BF18F /* REMCompoundResponseSerializer.m in Sources */,
@@ -439,6 +462,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2EBF81218E73A99003BF18F /* REMResponseSerializerTests.m in Sources */,
+				D2EBF81918E7F006003BF18F /* REMTestUtility.m in Sources */,
+				D29F18EC18E964FD006A9C2D /* REMCompoundResponseSerializerTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,7 +8,6 @@
 
 #import "REMResponseSerializer.h"
 #import <Mantle/Mantle.h>
-#import "NSDictionary+Maris.h"
 
 @interface REMResponseSerializer ()
 
@@ -16,6 +15,26 @@
 @property (nonatomic, copy, readwrite) NSString *keyPath;
 
 @end
+
+NSDictionary * REMObjectDictionaryAtKeyPath(NSDictionary *dictionary, NSString *keyPath) {
+    id objectDictionary = dictionary;
+    
+    NSArray *keys = [keyPath componentsSeparatedByString:@"."];
+    for (NSString *key in keys)
+    {
+        if ([objectDictionary isKindOfClass:[NSDictionary class]])
+        {
+            objectDictionary = [objectDictionary objectForKey:key];
+        }
+        else
+        {
+            objectDictionary = nil;
+            break;
+        }
+    }
+    
+    return objectDictionary;
+};
 
 @implementation REMResponseSerializer
 
@@ -30,7 +49,7 @@
     if (self)
     {
         _modelClass = modelClass;
-        _keyPath = keyPath;
+        _keyPath = [keyPath copy];
     }
     return self;
 }
@@ -45,7 +64,7 @@
     {
         if ([self.keyPath length] && [responseObject isKindOfClass:[NSDictionary class]])
         {
-            responseObject = [responseObject rem_objectForKeyPath:self.keyPath];
+            responseObject = REMObjectDictionaryAtKeyPath(responseObject, self.keyPath);
         }
         
         if (self.modelClass)
