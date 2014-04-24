@@ -26,7 +26,7 @@ Maris provides a method like this
 ```objective-c
 REMHTTPRequestOperationManager *manager = [REMHTTPRequestOperationManager manager];
 [manager GET:@"http://example.com/resources.json" parameters:nil modelClass:[MYObject class] keyPath:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
-    NSLog(@"JSON: %@", responseObject);
+    NSLog(@"Model object(s): %@", responseObject);
 } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
     NSLog(@"Error: %@", error);
 }];
