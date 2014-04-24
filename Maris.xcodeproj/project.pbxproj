@@ -10,6 +10,7 @@
 		6749315BD30144D28A791BAC /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B24EE8758C91449F8A697F76 /* libPods.a */; };
 		7FD359CCADCA4C95917FCCB7 /* libPods-MarisTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EDD644E9B54C41E297826667 /* libPods-MarisTests.a */; };
 		D29F18EC18E964FD006A9C2D /* REMCompoundResponseSerializerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D29F18EB18E964FD006A9C2D /* REMCompoundResponseSerializerTests.m */; };
+		D2AE2E5819098830007AB3EC /* REMHTTPSessionManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D2AE2E5719098830007AB3EC /* REMHTTPSessionManagerTests.m */; };
 		D2EBF7A518E6CB84003BF18F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2EBF7A418E6CB84003BF18F /* Foundation.framework */; };
 		D2EBF7A718E6CB84003BF18F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2EBF7A618E6CB84003BF18F /* CoreGraphics.framework */; };
 		D2EBF7A918E6CB84003BF18F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2EBF7A818E6CB84003BF18F /* UIKit.framework */; };
@@ -48,6 +49,7 @@
 		9DD2104CC5B7489D8767990A /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		B24EE8758C91449F8A697F76 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D29F18EB18E964FD006A9C2D /* REMCompoundResponseSerializerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REMCompoundResponseSerializerTests.m; sourceTree = "<group>"; };
+		D2AE2E5719098830007AB3EC /* REMHTTPSessionManagerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REMHTTPSessionManagerTests.m; sourceTree = "<group>"; };
 		D2EBF7A118E6CB84003BF18F /* Maris.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Maris.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2EBF7A418E6CB84003BF18F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D2EBF7A618E6CB84003BF18F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -110,6 +112,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D2AE2E5619098813007AB3EC /* NSURLSession */ = {
+			isa = PBXGroup;
+			children = (
+				D2AE2E5719098830007AB3EC /* REMHTTPSessionManagerTests.m */,
+			);
+			path = NSURLSession;
+			sourceTree = "<group>";
+		};
 		D2EBF79818E6CB84003BF18F = {
 			isa = PBXGroup;
 			children = (
@@ -220,6 +230,7 @@
 				D2EBF81718E7EFEB003BF18F /* REMTestUtility.m */,
 				D2EBF81B18E7F0C0003BF18F /* ESPNAthlete.h */,
 				D2EBF81C18E7F0C0003BF18F /* ESPNAthlete.m */,
+				D2AE2E5619098813007AB3EC /* NSURLSession */,
 				D2EBF81018E73A36003BF18F /* Serializers */,
 			);
 			path = Classes;
@@ -463,6 +474,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D2EBF81218E73A99003BF18F /* REMResponseSerializerTests.m in Sources */,
+				D2AE2E5819098830007AB3EC /* REMHTTPSessionManagerTests.m in Sources */,
 				D2EBF81918E7F006003BF18F /* REMTestUtility.m in Sources */,
 				D29F18EC18E964FD006A9C2D /* REMCompoundResponseSerializerTests.m in Sources */,
 			);
