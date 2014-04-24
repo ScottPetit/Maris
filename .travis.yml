@@ -1,0 +1,8 @@
+language: objective-c
+
+before_install: 
+    -  gem install cocoapods
+    -  gem install xcpretty
+
+script:
+    - xcodebuild -workspace Maris.xcworkspace -scheme Maris -sdk iphonesimulator test | xcpretty -c;
