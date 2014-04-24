@@ -7,5 +7,4 @@ before_install:
     -  brew install xctool --HEAD
 
 script:
-    -  xctool -workspace Maris.xcworkspace -scheme Maris -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
-    -  xctool test -workspace Maris.xcworkspace -scheme Maris -sdk iphonesimulator7.0
+    - xcodebuild -workspace Maris.xcworkspace -scheme Maris -sdk iphonesimulator test | xcpretty -c;
