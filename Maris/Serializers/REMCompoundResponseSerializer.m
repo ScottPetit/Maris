@@ -24,12 +24,19 @@
     
     id<AFURLResponseSerialization> responseSerializer = [self.mutableDictionary objectForKey:[URL absoluteString]];
     
+    id responseObject = nil;
+    
     if (!responseSerializer)
     {
         NSLog(@"No response serializer registered for URL - %@", URL);
+        responseObject = [super responseObjectForResponse:response data:data error:error];
+    }
+    else
+    {
+        responseObject = [responseSerializer responseObjectForResponse:response data:data error:error];
     }
     
-    return [responseSerializer responseObjectForResponse:response data:data error:error];
+    return responseObject;
 }
 
 #pragma mark - Public
@@ -72,7 +79,7 @@
     self = [super initWithCoder:decoder];
     if (self)
     {
-        self.mutableDictionary = [decoder decodeObjectForKey:NSStringFromSelector(@selector(mutableDictionary))];
+        _mutableDictionary = [decoder decodeObjectForKey:NSStringFromSelector(@selector(mutableDictionary))];
     }
     return self;
 }

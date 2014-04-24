@@ -94,8 +94,8 @@ NSDictionary * REMObjectDictionaryAtKeyPath(NSDictionary *dictionary, NSString *
     self = [super initWithCoder:decoder];
     if (self)
     {
-        self.modelClass = [decoder decodeObjectForKey:NSStringFromSelector(@selector(modelClass))];
-        self.keyPath = [decoder decodeObjectForKey:NSStringFromSelector(@selector(keyPath))];
+        _modelClass = [decoder decodeObjectForKey:NSStringFromSelector(@selector(modelClass))];
+        _keyPath = [decoder decodeObjectForKey:NSStringFromSelector(@selector(keyPath))];
     }
     return self;
 }
