@@ -9,6 +9,7 @@ Pod::Spec.new do |spec|
   spec.platform = :ios, '6.0'
   spec.requires_arc = true
   spec.frameworks = 'Foundation'
+  spec.social_media_url = 'https://twitter.com/scottpetit'
   
   spec.subspec 'Core' do |core|
     core.dependency 'Mantle', '~> 1.4'
