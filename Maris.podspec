@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name = 'Maris'
-  spec.version = '1.0.0'
+  spec.version = '1.0.1'
   spec.authors = {'Scott Petit' => 'petit.scott@gmail.com'}
   spec.homepage = 'https://github.com/ScottPetit/Maris'
   spec.summary = 'AFNetworking 2.0 and Mantle made easy'
@@ -12,8 +12,8 @@ Pod::Spec.new do |spec|
   spec.social_media_url = 'https://twitter.com/scottpetit'
   
   spec.subspec 'Core' do |core|
-    core.dependency 'Mantle', '~> 1.4'
-    core.dependency 'AFNetworking', '~> 2.2.0'
+    core.dependency 'Mantle', '~> 1.5.0'
+    core.dependency 'AFNetworking', '~> 2.5.0'
     core.source_files = 'Maris/Categories/*.{h,m}', 'Maris/Serializers/*.{h,m}' 
   end
 
