@@ -39,6 +39,7 @@
                       success:(void (^)(NSURLSessionDataTask *, id))success
                       failure:(void (^)(NSURLSessionDataTask *, NSError *))failure
 {
+    URLString = [URLString stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
     NSURLSessionDataTask *dataTask = [self GET:URLString parameters:parameters success:success failure:failure];
     
     [self registerSerializerWithModelClass:modelClass keyPath:keyPath toDataTask:dataTask];
@@ -53,6 +54,7 @@
                        success:(void (^)(NSURLSessionDataTask *))success
                        failure:(void (^)(NSURLSessionDataTask *, NSError *))failure
 {
+    URLString = [URLString stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
     NSURLSessionDataTask *dataTask = [self HEAD:URLString parameters:parameters success:success failure:failure];
     
     [self registerSerializerWithModelClass:modelClass keyPath:keyPath toDataTask:dataTask];
@@ -67,6 +69,7 @@
                        success:(void (^)(NSURLSessionDataTask *, id))success
                        failure:(void (^)(NSURLSessionDataTask *, NSError *))failure
 {
+    URLString = [URLString stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
     NSURLSessionDataTask *dataTask = [self POST:URLString parameters:parameters success:success failure:failure];
     
     [self registerSerializerWithModelClass:modelClass keyPath:keyPath toDataTask:dataTask];
@@ -82,6 +85,7 @@
                        success:(void (^)(NSURLSessionDataTask *, id))success
                        failure:(void (^)(NSURLSessionDataTask *, NSError *))failure
 {
+    URLString = [URLString stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
     NSURLSessionDataTask *dataTask = [self POST:URLString parameters:parameters constructingBodyWithBlock:block success:success failure:failure];
     
     [self registerSerializerWithModelClass:modelClass keyPath:keyPath toDataTask:dataTask];
@@ -96,6 +100,7 @@
                       success:(void (^)(NSURLSessionDataTask *, id))success
                       failure:(void (^)(NSURLSessionDataTask *, NSError *))failure
 {
+    URLString = [URLString stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
     NSURLSessionDataTask *dataTask = [self PUT:URLString parameters:parameters success:success failure:failure];
     
     [self registerSerializerWithModelClass:modelClass keyPath:keyPath toDataTask:dataTask];
@@ -110,6 +115,7 @@
                         success:(void (^)(NSURLSessionDataTask *, id))success
                         failure:(void (^)(NSURLSessionDataTask *, NSError *))failure
 {
+    URLString = [URLString stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
     NSURLSessionDataTask *dataTask = [self PATCH:URLString parameters:parameters success:success failure:failure];
     
     [self registerSerializerWithModelClass:modelClass keyPath:keyPath toDataTask:dataTask];
@@ -124,6 +130,7 @@
                          success:(void (^)(NSURLSessionDataTask *, id))success
                          failure:(void (^)(NSURLSessionDataTask *, NSError *))failure
 {
+    URLString = [URLString stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
     NSURLSessionDataTask *dataTask = [self DELETE:URLString parameters:parameters success:success failure:failure];
     
     [self registerSerializerWithModelClass:modelClass keyPath:keyPath toDataTask:dataTask];

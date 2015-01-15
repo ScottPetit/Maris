@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name = 'Maris'
-  spec.version = '1.0.2'
+  spec.version = '1.0.3'
   spec.authors = {'Scott Petit' => 'petit.scott@gmail.com'}
   spec.homepage = 'https://github.com/ScottPetit/Maris'
   spec.summary = 'AFNetworking 2.0 and Mantle made easy'
