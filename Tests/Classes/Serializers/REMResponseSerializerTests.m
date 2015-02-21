@@ -9,6 +9,7 @@
 #import <XCTest/XCTest.h>
 #import "REMTestUtility.h"
 #import "REMResponseSerializer.h"
+#import "NSError+Maris.h"
 #import <OCMock/OCMock.h>
 #import "ESPNAthlete.h"
 
@@ -109,6 +110,21 @@
     ESPNAthlete *athlete = [serializer responseObjectForResponse:self.URLResponse data:data error:NULL];
     
     [self validateAthleteIsRogerMaris:athlete];
+}
+
+- (void)testThatTryingToDeserializeAModelWithAnInappropriateKeyPathReturnsAnAppropriateError
+{
+    NSData *data = [REMTestUtility dataForJSONWithFileName:@"baseball"];
+    
+    REMResponseSerializer *serializer = [REMResponseSerializer serializerWithModelClass:[ESPNAthlete class] keyPath:@"athl"];
+    NSError *error = nil;
+    id response = [serializer responseObjectForResponse:self.URLResponse data:data error:&error];
+    
+    // Response should be nil because there is no value for the key path 'athl'
+    XCTAssertNil(response);
+    XCTAssertNotNil(error);
+    XCTAssertEqualObjects(error.domain, MarisErrorDomain);
+    XCTAssertEqual(error.code, MarisFailingKeyPathErrorCode);
 }
 
 #pragma mark - Private

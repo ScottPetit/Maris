@@ -7,6 +7,7 @@
 //
 
 #import "REMResponseSerializer.h"
+#import "NSError+Maris.h"
 #import <Mantle/Mantle.h>
 
 @interface REMResponseSerializer ()
@@ -15,26 +16,6 @@
 @property (nonatomic, copy, readwrite) NSString *keyPath;
 
 @end
-
-NSDictionary * REMObjectDictionaryAtKeyPath(NSDictionary *dictionary, NSString *keyPath) {
-    id objectDictionary = dictionary;
-    
-    NSArray *keys = [keyPath componentsSeparatedByString:@"."];
-    for (NSString *key in keys)
-    {
-        if ([objectDictionary isKindOfClass:[NSDictionary class]])
-        {
-            objectDictionary = [objectDictionary objectForKey:key];
-        }
-        else
-        {
-            objectDictionary = nil;
-            break;
-        }
-    }
-    
-    return objectDictionary;
-};
 
 @implementation REMResponseSerializer
 
@@ -64,7 +45,13 @@ NSDictionary * REMObjectDictionaryAtKeyPath(NSDictionary *dictionary, NSString *
     {
         if ([self.keyPath length] && [responseObject isKindOfClass:[NSDictionary class]])
         {
-            responseObject = REMObjectDictionaryAtKeyPath(responseObject, self.keyPath);
+            responseObject = [responseObject valueForKeyPath:self.keyPath];
+            
+            if (responseObject == nil) {
+                NSString *errorDescription = [NSString stringWithFormat:@"Failed to find value for key: %@", self.keyPath];
+                *error = [NSError marisErrorWithCode:MarisFailingKeyPathErrorCode description:errorDescription error:*error];
+                return nil;
+            }
         }
         
         if (self.modelClass)

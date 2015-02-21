@@ -8,8 +8,6 @@
 
 #import "AFURLResponseSerialization.h"
 
-extern NSDictionary * REMObjectDictionaryAtKeyPath(NSDictionary *dictionary, NSString *keyPath);
-
 @interface REMResponseSerializer : AFJSONResponseSerializer
 
 + (instancetype)serializerWithModelClass:(Class)modelClass keyPath:(NSString *)keyPath;
