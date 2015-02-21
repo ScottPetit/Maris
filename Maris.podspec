@@ -1,30 +1,18 @@
 Pod::Spec.new do |spec|
   spec.name = 'Maris'
-  spec.version = '1.1.1'
+  spec.version = '1.2.0'
   spec.authors = {'Scott Petit' => 'petit.scott@gmail.com'}
   spec.homepage = 'https://github.com/ScottPetit/Maris'
   spec.summary = 'AFNetworking 2.0 and Mantle made easy'
   spec.source = {:git => 'https://github.com/ScottPetit/Maris.git', :tag => "v#{spec.version}"}
   spec.license = { :type => 'MIT', :file => 'LICENSE' }
-  spec.platform = :ios, '6.0'
+  spec.platform = :ios, '7.0'
   spec.requires_arc = true
   spec.frameworks = 'Foundation'
   spec.social_media_url = 'https://twitter.com/scottpetit'
 
-  spec.subspec 'Core' do |core|
-    core.dependency 'Mantle', '~> 1.5.0'
-    core.source_files = 'Maris/Categories/*.{h,m}', 'Maris/Serializers/*.{h,m}'
-  end
+  spec.dependency 'Mantle', '~> 1.5.0'
+  spec.dependency 'AFNetworking/NSURLSession', '~> 2.5.0'
 
-  spec.subspec 'NSURLSession' do |ss|
-    ss.dependency 'Maris/Core'
-    ss.dependency 'AFNetworking/NSURLSession', '~> 2.5.0'
-    ss.source_files = 'Maris/NSURLSession/*.{h,m}'
-  end
-
-  spec.subspec 'NSURLConnection' do |ss|
-    ss.dependency 'Maris/Core'
-    ss.dependency 'AFNetworking/NSURLConnection', '~> 2.5.0'
-    ss.source_files = 'Maris/NSURLConnection/*{h,m}'
-  end
+  spec.source_files = 'Maris/Categories/*.{h,m}', 'Maris/Serializers/*.{h,m}', 'Maris/NSURLSession/*.{h,m}'
 end

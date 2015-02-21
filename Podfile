@@ -1,6 +1,6 @@
 platform :ios, '7.0'
 
-pod 'AFNetworking'
+pod 'AFNetworking/NSURLSession'
 pod 'Mantle'
 
 target :MarisTests, :exclusive => true do

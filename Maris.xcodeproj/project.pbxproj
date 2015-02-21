@@ -26,7 +26,6 @@
 		D2EBF7F218E6CCE0003BF18F /* REMCompoundResponseSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = D2EBF7EF18E6CCE0003BF18F /* REMCompoundResponseSerializer.m */; };
 		D2EBF7F318E6CCE0003BF18F /* REMResponseSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = D2EBF7F118E6CCE0003BF18F /* REMResponseSerializer.m */; };
 		D2EBF7FF18E70DAE003BF18F /* REMHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D2EBF7FE18E70DAE003BF18F /* REMHTTPSessionManager.m */; };
-		D2EBF80218E70DFB003BF18F /* REMHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D2EBF80118E70DFB003BF18F /* REMHTTPRequestOperationManager.m */; };
 		D2EBF80E18E71556003BF18F /* DRBLShot.m in Sources */ = {isa = PBXBuildFile; fileRef = D2EBF80B18E71556003BF18F /* DRBLShot.m */; };
 		D2EBF80F18E71556003BF18F /* DribbbleHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D2EBF80D18E71556003BF18F /* DribbbleHTTPSessionManager.m */; };
 		D2EBF81218E73A99003BF18F /* REMResponseSerializerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D2EBF81118E73A99003BF18F /* REMResponseSerializerTests.m */; };
@@ -75,8 +74,6 @@
 		D2EBF7F118E6CCE0003BF18F /* REMResponseSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REMResponseSerializer.m; sourceTree = "<group>"; };
 		D2EBF7FD18E70DAE003BF18F /* REMHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REMHTTPSessionManager.h; sourceTree = "<group>"; };
 		D2EBF7FE18E70DAE003BF18F /* REMHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REMHTTPSessionManager.m; sourceTree = "<group>"; };
-		D2EBF80018E70DFB003BF18F /* REMHTTPRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REMHTTPRequestOperationManager.h; sourceTree = "<group>"; };
-		D2EBF80118E70DFB003BF18F /* REMHTTPRequestOperationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REMHTTPRequestOperationManager.m; sourceTree = "<group>"; };
 		D2EBF80A18E71556003BF18F /* DRBLShot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRBLShot.h; sourceTree = "<group>"; };
 		D2EBF80B18E71556003BF18F /* DRBLShot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRBLShot.m; sourceTree = "<group>"; };
 		D2EBF80C18E71556003BF18F /* DribbbleHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DribbbleHTTPSessionManager.h; sourceTree = "<group>"; };
@@ -222,7 +219,6 @@
 			isa = PBXGroup;
 			children = (
 				D2EBF7FC18E70DAE003BF18F /* NSURLSession */,
-				D2EBF7FB18E70DAE003BF18F /* NSURLConnection */,
 				D2EBF7ED18E6CCE0003BF18F /* Serializers */,
 				D205A5081A988D5800808613 /* Categories */,
 			);
@@ -270,15 +266,6 @@
 				D2EBF7F118E6CCE0003BF18F /* REMResponseSerializer.m */,
 			);
 			path = Serializers;
-			sourceTree = "<group>";
-		};
-		D2EBF7FB18E70DAE003BF18F /* NSURLConnection */ = {
-			isa = PBXGroup;
-			children = (
-				D2EBF80018E70DFB003BF18F /* REMHTTPRequestOperationManager.h */,
-				D2EBF80118E70DFB003BF18F /* REMHTTPRequestOperationManager.m */,
-			);
-			path = NSURLConnection;
 			sourceTree = "<group>";
 		};
 		D2EBF7FC18E70DAE003BF18F /* NSURLSession */ = {
@@ -482,7 +469,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D2EBF80218E70DFB003BF18F /* REMHTTPRequestOperationManager.m in Sources */,
 				D2EBF7FF18E70DAE003BF18F /* REMHTTPSessionManager.m in Sources */,
 				D2EBF81D18E7F0C0003BF18F /* ESPNAthlete.m in Sources */,
 				D2EBF7E718E6CBCC003BF18F /* main.m in Sources */,
