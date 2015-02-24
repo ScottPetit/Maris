@@ -84,6 +84,7 @@
 		D2EBF81718E7EFEB003BF18F /* REMTestUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REMTestUtility.m; sourceTree = "<group>"; };
 		D2EBF81B18E7F0C0003BF18F /* ESPNAthlete.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESPNAthlete.h; sourceTree = "<group>"; };
 		D2EBF81C18E7F0C0003BF18F /* ESPNAthlete.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESPNAthlete.m; sourceTree = "<group>"; };
+		D2EC9B281A9C9AFE003C7D36 /* Maris.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Maris.h; sourceTree = "<group>"; };
 		EC52A40FBFC2EDA53ED9BBA0 /* Pods-MarisTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarisTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MarisTests/Pods-MarisTests.debug.xcconfig"; sourceTree = "<group>"; };
 		EDD644E9B54C41E297826667 /* libPods-MarisTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MarisTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -218,6 +219,7 @@
 		D2EBF7DF18E6CBCC003BF18F /* Maris */ = {
 			isa = PBXGroup;
 			children = (
+				D2EC9B281A9C9AFE003C7D36 /* Maris.h */,
 				D2EBF7FC18E70DAE003BF18F /* NSURLSession */,
 				D2EBF7ED18E6CCE0003BF18F /* Serializers */,
 				D205A5081A988D5800808613 /* Categories */,
