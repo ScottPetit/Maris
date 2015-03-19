@@ -17,6 +17,8 @@
 
 @implementation REMHTTPSessionManager
 
+@dynamic responseSerializer;
+
 - (instancetype)initWithBaseURL:(NSURL *)url
 {
     return [self initWithBaseURL:url sessionConfiguration:nil];
