@@ -25,7 +25,7 @@
     
     self.mockResponseSerializer = [OCMockObject niceMockForClass:[REMCompoundResponseSerializer class]];
     
-    NSURL *baseURL = [NSURL URLWithString:@"http://www.google.com"];
+    NSURL *baseURL = [NSURL URLWithString:@"http://www.google.com/"];
     self.sessionManager = [[REMHTTPSessionManager alloc] initWithBaseURL:baseURL];
     self.sessionManager.responseSerializer = self.mockResponseSerializer;
 }
@@ -97,6 +97,69 @@
     [[self.mockResponseSerializer expect] registerResponseSerializer:OCMOCK_ANY withDataTask:OCMOCK_ANY];
     
     [self.sessionManager DELETE:@"maps" parameters:nil modelClass:[NSObject class] keyPath:nil success:nil failure:nil];
+    
+    [self.mockResponseSerializer verify];
+}
+
+- (void)testThatAGETEmojiRequestRegistersASerializer
+{
+    [[self.mockResponseSerializer expect] registerResponseSerializer:OCMOCK_ANY withDataTask:OCMOCK_ANY];
+    
+    [self.sessionManager GET:@"🍪" parameters:nil modelClass:[NSObject class] keyPath:nil success:nil failure:nil];
+    
+    [self.mockResponseSerializer verify];
+}
+
+- (void)testThatAHEADEmojiRequestRegistersASerializer
+{
+    [[self.mockResponseSerializer expect] registerResponseSerializer:OCMOCK_ANY withDataTask:OCMOCK_ANY];
+    
+    [self.sessionManager HEAD:@"🍪" parameters:nil modelClass:[NSObject class] keyPath:nil success:nil failure:nil];
+    
+    [self.mockResponseSerializer verify];
+}
+
+- (void)testThatAPOSTEmojiRequestRegistersASerializer
+{
+    [[self.mockResponseSerializer expect] registerResponseSerializer:OCMOCK_ANY withDataTask:OCMOCK_ANY];
+    
+    [self.sessionManager POST:@"🍪" parameters:nil modelClass:[NSObject class] keyPath:nil success:nil failure:nil];
+    
+    [self.mockResponseSerializer verify];
+}
+
+- (void)testThatAPOSTEmojiConstructingBodyWithBlockRequestRegistersASerializer
+{
+    [[self.mockResponseSerializer expect] registerResponseSerializer:OCMOCK_ANY withDataTask:OCMOCK_ANY];
+    
+    [self.sessionManager POST:@"🍪" parameters:nil constructingBodyWithBlock:nil modelClass:[NSObject class] keyPath:nil success:nil failure:nil];
+    
+    [self.mockResponseSerializer verify];
+}
+
+- (void)testThatAPUTEmojiRequestRegistersASerializer
+{
+    [[self.mockResponseSerializer expect] registerResponseSerializer:OCMOCK_ANY withDataTask:OCMOCK_ANY];
+    
+    [self.sessionManager PUT:@"🍪" parameters:nil modelClass:[NSObject class] keyPath:nil success:nil failure:nil];
+    
+    [self.mockResponseSerializer verify];
+}
+
+- (void)testThatAPATCHEmojiRequestRegistersASerializer
+{
+    [[self.mockResponseSerializer expect] registerResponseSerializer:OCMOCK_ANY withDataTask:OCMOCK_ANY];
+    
+    [self.sessionManager PATCH:@"🍪" parameters:nil modelClass:[NSObject class] keyPath:nil success:nil failure:nil];
+    
+    [self.mockResponseSerializer verify];
+}
+
+- (void)testThatADELETEEmojiRequestRegistersASerializer
+{
+    [[self.mockResponseSerializer expect] registerResponseSerializer:OCMOCK_ANY withDataTask:OCMOCK_ANY];
+    
+    [self.sessionManager DELETE:@"🍪" parameters:nil modelClass:[NSObject class] keyPath:nil success:nil failure:nil];
     
     [self.mockResponseSerializer verify];
 }

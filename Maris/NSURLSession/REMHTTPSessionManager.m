@@ -19,14 +19,14 @@
 
 @dynamic responseSerializer;
 
-- (instancetype)initWithBaseURL:(NSURL *)url
+- (instancetype)initWithBaseURL:(NSURL *)URL
 {
-    return [self initWithBaseURL:url sessionConfiguration:nil];
+    return [self initWithBaseURL:URL sessionConfiguration:nil];
 }
 
-- (instancetype)initWithBaseURL:(NSURL *)url sessionConfiguration:(NSURLSessionConfiguration *)configuration
+- (instancetype)initWithBaseURL:(NSURL *)URL sessionConfiguration:(NSURLSessionConfiguration *)configuration
 {
-    self = [super initWithBaseURL:url sessionConfiguration:configuration];
+    self = [super initWithBaseURL:URL sessionConfiguration:configuration];
     if (self)
     {
         self.responseSerializer = [REMCompoundResponseSerializer serializer];
@@ -41,7 +41,7 @@
                       success:(void (^)(NSURLSessionDataTask *, id))success
                       failure:(void (^)(NSURLSessionDataTask *, NSError *))failure
 {
-    NSURLSessionDataTask *dataTask = [self GET:URLString parameters:parameters success:success failure:failure];
+    NSURLSessionDataTask *dataTask = [self GET:[URLString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding] parameters:parameters success:success failure:failure];
     
     [self registerSerializerWithModelClass:modelClass keyPath:keyPath toDataTask:dataTask];
     
@@ -55,7 +55,7 @@
                        success:(void (^)(NSURLSessionDataTask *))success
                        failure:(void (^)(NSURLSessionDataTask *, NSError *))failure
 {
-    NSURLSessionDataTask *dataTask = [self HEAD:URLString parameters:parameters success:success failure:failure];
+    NSURLSessionDataTask *dataTask = [self HEAD:[URLString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding] parameters:parameters success:success failure:failure];
     
     [self registerSerializerWithModelClass:modelClass keyPath:keyPath toDataTask:dataTask];
     
@@ -69,7 +69,7 @@
                        success:(void (^)(NSURLSessionDataTask *, id))success
                        failure:(void (^)(NSURLSessionDataTask *, NSError *))failure
 {
-    NSURLSessionDataTask *dataTask = [self POST:URLString parameters:parameters success:success failure:failure];
+    NSURLSessionDataTask *dataTask = [self POST:[URLString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding] parameters:parameters success:success failure:failure];
     
     [self registerSerializerWithModelClass:modelClass keyPath:keyPath toDataTask:dataTask];
     
@@ -84,7 +84,7 @@
                        success:(void (^)(NSURLSessionDataTask *, id))success
                        failure:(void (^)(NSURLSessionDataTask *, NSError *))failure
 {
-    NSURLSessionDataTask *dataTask = [self POST:URLString parameters:parameters constructingBodyWithBlock:block success:success failure:failure];
+    NSURLSessionDataTask *dataTask = [self POST:[URLString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding] parameters:parameters constructingBodyWithBlock:block success:success failure:failure];
     
     [self registerSerializerWithModelClass:modelClass keyPath:keyPath toDataTask:dataTask];
     
@@ -98,7 +98,7 @@
                       success:(void (^)(NSURLSessionDataTask *, id))success
                       failure:(void (^)(NSURLSessionDataTask *, NSError *))failure
 {
-    NSURLSessionDataTask *dataTask = [self PUT:URLString parameters:parameters success:success failure:failure];
+    NSURLSessionDataTask *dataTask = [self PUT:[URLString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding] parameters:parameters success:success failure:failure];
     
     [self registerSerializerWithModelClass:modelClass keyPath:keyPath toDataTask:dataTask];
     
@@ -112,7 +112,7 @@
                         success:(void (^)(NSURLSessionDataTask *, id))success
                         failure:(void (^)(NSURLSessionDataTask *, NSError *))failure
 {
-    NSURLSessionDataTask *dataTask = [self PATCH:URLString parameters:parameters success:success failure:failure];
+    NSURLSessionDataTask *dataTask = [self PATCH:[URLString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding] parameters:parameters success:success failure:failure];
     
     [self registerSerializerWithModelClass:modelClass keyPath:keyPath toDataTask:dataTask];
     
@@ -126,7 +126,7 @@
                          success:(void (^)(NSURLSessionDataTask *, id))success
                          failure:(void (^)(NSURLSessionDataTask *, NSError *))failure
 {
-    NSURLSessionDataTask *dataTask = [self DELETE:URLString parameters:parameters success:success failure:failure];
+    NSURLSessionDataTask *dataTask = [self DELETE:[URLString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding] parameters:parameters success:success failure:failure];
     
     [self registerSerializerWithModelClass:modelClass keyPath:keyPath toDataTask:dataTask];
     
