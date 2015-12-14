@@ -7,8 +7,7 @@ Pod::Spec.new do |spec|
   spec.source = {:git => 'https://github.com/ScottPetit/Maris.git', :tag => "v#{spec.version}"}
   spec.license = { :type => 'MIT', :file => 'LICENSE' }
   spec.platform = :ios, '7.0'
-  spec.ios.deployment_target = '7.0'
-  spec.tvos.deployment_target = '9.0'
+  spec.ios.deployment_target = '7.0'  
   spec.requires_arc = true
   spec.frameworks = 'Foundation'
   spec.social_media_url = 'https://twitter.com/scottpetit'
