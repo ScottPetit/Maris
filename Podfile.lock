@@ -1,24 +1,24 @@
 PODS:
-  - AFNetworking/NSURLSession (2.6.1):
+  - AFNetworking/NSURLSession (3.0.1):
     - AFNetworking/Reachability
     - AFNetworking/Security
     - AFNetworking/Serialization
-  - AFNetworking/Reachability (2.6.1)
-  - AFNetworking/Security (2.6.1)
-  - AFNetworking/Serialization (2.6.1)
-  - Mantle (2.0.5):
-    - Mantle/extobjc (= 2.0.5)
-  - Mantle/extobjc (2.0.5)
+  - AFNetworking/Reachability (3.0.1)
+  - AFNetworking/Security (3.0.1)
+  - AFNetworking/Serialization (3.0.1)
+  - Mantle (1.5.6):
+    - Mantle/extobjc (= 1.5.6)
+  - Mantle/extobjc (1.5.6)
   - OCMock (3.2)
 
 DEPENDENCIES:
   - AFNetworking/NSURLSession
-  - Mantle (~> 2.0.0)
+  - Mantle (~> 1.5.0)
   - OCMock
 
 SPEC CHECKSUMS:
-  AFNetworking: 8e4e60500beb8bec644cf575beee72990a76d399
-  Mantle: 1912395033f601de5adc8ee91e48f46e4c7051ad
+  AFNetworking: 20d8749e03e45f1e5c046ad0b647e0b07bcdd91f
+  Mantle: a197db93e0f1e36194b1fdbc078219a8492eaef2
   OCMock: 28def049ef47f996b515a8eeea958be7ccab2dbb
 
 COCOAPODS: 0.39.0

@@ -28,13 +28,10 @@
     
     if (!responseSerializer)
     {
-        NSLog(@"No response serializer registered for URL - %@", URL);
-        responseObject = [super responseObjectForResponse:response data:data error:error];
+        // Default to using JSON Serializer
+        responseSerializer = [AFJSONResponseSerializer serializer];
     }
-    else
-    {
-        responseObject = [responseSerializer responseObjectForResponse:response data:data error:error];
-    }
+    responseObject = [responseSerializer responseObjectForResponse:response data:data error:error];
     
     return responseObject;
 }
