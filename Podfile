@@ -1,7 +1,7 @@
 platform :ios, '7.0'
 
-pod 'AFNetworking/NSURLSession', '~> 2.5.0'
-pod 'Mantle', '~> 1.5.0'
+pod 'AFNetworking/NSURLSession', '~> 3.0.0'
+pod 'Mantle', '~> 2.0.0'
 
 target :MarisTests, :exclusive => true do
   pod 'OCMock'

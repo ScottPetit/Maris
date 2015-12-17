@@ -16,6 +16,16 @@
 
 @implementation REMCompoundResponseSerializer
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        // Default to using JSON Serializer
+        _defaultSerializer = [AFJSONResponseSerializer serializer];
+    }
+    return self;
+}
+
 #pragma mark - AFHTTPResponseSerializer
 
 - (id)responseObjectForResponse:(NSURLResponse *)response data:(NSData *)data error:(NSError *__autoreleasing *)error
@@ -23,15 +33,12 @@
     NSURL *URL = [response URL];
     
     id<AFURLResponseSerialization> responseSerializer = [self.mutableDictionary objectForKey:[URL absoluteString]];
-    
-    id responseObject = nil;
-    
     if (!responseSerializer)
     {
-        // Default to using JSON Serializer
-        responseSerializer = [AFJSONResponseSerializer serializer];
+        responseSerializer = self.defaultSerializer;
     }
-    responseObject = [responseSerializer responseObjectForResponse:response data:data error:error];
+    
+    id responseObject = [responseSerializer responseObjectForResponse:response data:data error:error];
     
     return responseObject;
 }

@@ -60,11 +60,11 @@
             
             if ([responseObject isKindOfClass:[NSDictionary class]])
             {
-                valueTransformer = [NSValueTransformer mtl_JSONDictionaryTransformerWithModelClass:self.modelClass];
+                valueTransformer = [MTLJSONAdapter dictionaryTransformerWithModelClass:self.modelClass];
             }
             else if ([responseObject isKindOfClass:[NSArray class]])
             {
-                valueTransformer = [NSValueTransformer mtl_JSONArrayTransformerWithModelClass:self.modelClass];
+                valueTransformer = [MTLJSONAdapter arrayTransformerWithModelClass:self.modelClass];
             }
             
             responseObject = [valueTransformer transformedValue:responseObject];

@@ -42,7 +42,7 @@
 {
     [[self.mockResponseSerializer expect] registerResponseSerializer:OCMOCK_ANY withDataTask:OCMOCK_ANY];
     
-    [self.sessionManager GET:@"maps" parameters:nil modelClass:[NSObject class] keyPath:nil success:nil failure:nil];
+    [self.sessionManager GET:@"maps" parameters:nil progress:nil modelClass:[NSObject class] keyPath:nil success:nil failure:nil];
     
     [self.mockResponseSerializer verify];
 }
@@ -60,7 +60,7 @@
 {
     [[self.mockResponseSerializer expect] registerResponseSerializer:OCMOCK_ANY withDataTask:OCMOCK_ANY];
     
-    [self.sessionManager POST:@"maps" parameters:nil modelClass:[NSObject class] keyPath:nil success:nil failure:nil];
+    [self.sessionManager POST:@"maps"  parameters:nil progress:nil modelClass:[NSObject class] keyPath:nil success:nil failure:nil];
     
     [self.mockResponseSerializer verify];
 }
@@ -105,7 +105,7 @@
 {
     [[self.mockResponseSerializer expect] registerResponseSerializer:OCMOCK_ANY withDataTask:OCMOCK_ANY];
     
-    [self.sessionManager GET:@"🍪" parameters:nil modelClass:[NSObject class] keyPath:nil success:nil failure:nil];
+    [self.sessionManager GET:@"🍪" parameters:nil progress:nil modelClass:[NSObject class] keyPath:nil success:nil failure:nil];
     
     [self.mockResponseSerializer verify];
 }
@@ -123,7 +123,7 @@
 {
     [[self.mockResponseSerializer expect] registerResponseSerializer:OCMOCK_ANY withDataTask:OCMOCK_ANY];
     
-    [self.sessionManager POST:@"🍪" parameters:nil modelClass:[NSObject class] keyPath:nil success:nil failure:nil];
+    [self.sessionManager POST:@"🍪" parameters:nil progress:nil modelClass:[NSObject class] keyPath:nil success:nil failure:nil];
     
     [self.mockResponseSerializer verify];
 }
@@ -132,7 +132,7 @@
 {
     [[self.mockResponseSerializer expect] registerResponseSerializer:OCMOCK_ANY withDataTask:OCMOCK_ANY];
     
-    [self.sessionManager POST:@"🍪" parameters:nil constructingBodyWithBlock:nil modelClass:[NSObject class] keyPath:nil success:nil failure:nil];
+    [self.sessionManager POST:@"🍪" parameters:nil constructingBodyWithBlock:nil progress:nil modelClass:[NSObject class] keyPath:nil success:nil failure:nil];
     
     [self.mockResponseSerializer verify];
 }

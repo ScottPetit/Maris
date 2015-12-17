@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name = 'Maris'
-  spec.version = '1.4.1'
+  spec.version = '2.0.0'
   spec.authors = {'Scott Petit' => 'petit.scott@gmail.com'}
   spec.homepage = 'https://github.com/ScottPetit/Maris'
   spec.summary = 'AFNetworking 2.0 and Mantle made easy'
@@ -12,8 +12,8 @@ Pod::Spec.new do |spec|
   spec.frameworks = 'Foundation'
   spec.social_media_url = 'https://twitter.com/scottpetit'
 
-  spec.dependency 'Mantle', '~> 1.5.0'
-  spec.dependency 'AFNetworking/NSURLSession', '~> 2.5.0'
+  spec.dependency 'Mantle', '~> 2.0.0'
+  spec.dependency 'AFNetworking/NSURLSession', '~> 3.0.0'
 
   spec.source_files = 'Maris/Categories/*.{h,m}', 'Maris/Serializers/*.{h,m}', 'Maris/NSURLSession/*.{h,m}'
 end

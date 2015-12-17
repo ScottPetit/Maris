@@ -14,7 +14,9 @@
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey
 {
-    return @{NSStringFromSelector(@selector(identifier)): @"id"};
+    NSDictionary *identityProperties = [NSDictionary mtl_identityPropertyMapWithModel:self];
+    identityProperties = [identityProperties mtl_dictionaryByAddingEntriesFromDictionary:@{NSStringFromSelector(@selector(identifier)): @"id"}];
+    return identityProperties;
 }
 
 @end

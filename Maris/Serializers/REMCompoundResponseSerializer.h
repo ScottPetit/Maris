@@ -10,6 +10,11 @@
 
 @interface REMCompoundResponseSerializer : AFCompoundResponseSerializer
 
+/**
+ The default response serializer to use in cases where the component response serailizers does not contain an appropriate response serializer for the given response.
+ */
+@property (nonatomic, strong) id<AFURLResponseSerialization> defaultSerializer;
+
 - (void)registerResponseSerializer:(id<AFURLResponseSerialization>)responseSerializer withDataTask:(NSURLSessionDataTask *)dataTask;
 
 @end

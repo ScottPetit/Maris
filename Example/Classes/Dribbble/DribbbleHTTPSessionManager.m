@@ -26,7 +26,7 @@
 
 - (void)shotsWithSuccess:(DribbbleSessionManagerSuccess)success failure:(DribbbleSessionManagerFailure)failure
 {
-    [self GET:@"shots/popular" parameters:nil modelClass:[DRBLShot class] keyPath:@"shots" success:success failure:failure];
+    [self GET:@"shots/popular" parameters:nil progress:nil modelClass:[DRBLShot class] keyPath:@"shots" success:success failure:failure];
 }
 
 @end
