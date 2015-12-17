@@ -358,7 +358,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = REM;
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Scott Petit";
 				TargetAttributes = {
 					D2EBF7BB18E6CB84003BF18F = {
@@ -574,6 +574,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -637,6 +638,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Example/Other Sources/Maris-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/Example/Other Sources/Maris-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.scottpetit.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -651,6 +653,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Example/Other Sources/Maris-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/Example/Other Sources/Maris-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.scottpetit.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -662,7 +665,6 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Maris.app/Maris";
 				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
@@ -673,6 +675,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "Tests/Other Sources/MarisTests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.scottpetit.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
@@ -685,13 +688,13 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Maris.app/Maris";
 				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Example/Other Sources/Maris-Prefix.pch";
 				INFOPLIST_FILE = "Tests/Other Sources/MarisTests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.scottpetit.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
